@@ -15,7 +15,7 @@ const Page: React.FC = () => {
             className="gray"
             sectionName="home"
             id="section1"
-            overlayNode={<Countdown targetDate={new Date('08-26-2023')} />}
+            overlayNode={<Countdown targetDate={new Date('08-26-2023 17:00:00')} />}
           />
           <SectionBase
             className="gray"

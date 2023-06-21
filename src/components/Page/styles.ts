@@ -9,17 +9,16 @@ export const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100%;
-  }
-
-  .section-1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.35;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.9;
+    }
   }
 
   .gray:nth-child(even) {

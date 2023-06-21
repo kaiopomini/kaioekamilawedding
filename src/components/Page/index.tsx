@@ -12,7 +12,7 @@ const Page: React.FC = () => {
       <SectionWrapper>
         <div>
           <SectionBase
-            className="gray"
+            className="section-1"
             sectionName="home"
             id="section1"
             overlayNode={<Countdown targetDate={new Date('08-26-2023 17:00:00')} />}

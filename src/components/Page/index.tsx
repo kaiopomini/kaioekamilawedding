@@ -4,6 +4,7 @@ import Countdown from '../Countdown';
 import Menu from '../Menu';
 import { SectionBase, SectionWrapper } from '../Section';
 import UniqueOverlay from '../UniqueOverlay';
+import { Home } from './Home';
 import { Container } from './styles';
 
 const Page: React.FC = () => {
@@ -15,7 +16,7 @@ const Page: React.FC = () => {
             className="section-1"
             sectionName="home"
             id="section1"
-            overlayNode={<Countdown targetDate={new Date('08-26-2023 17:00:00')} />}
+            overlayNode={<Home />}
           />
           <SectionBase
             className="gray"

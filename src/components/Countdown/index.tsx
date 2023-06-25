@@ -1,33 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 
-const CountdownContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: -1;
-  }
-`;
-
-const TimeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 10px;
-  color: white;
-`;
+import { CountdownContainer, TimeContainer, TimeSubtitle, TimeTitle } from './styles';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   targetDate: Date;
@@ -39,6 +12,20 @@ interface LeftTime {
   minutes: number;
   seconds: number;
 }
+
+const counterItem = (title: string, subtitle: string) => {
+  return (
+    <TimeContainer>
+      <div>
+        <TimeTitle>{title}</TimeTitle>
+      </div>
+      <div>
+        <TimeSubtitle>{subtitle}</TimeSubtitle>
+      </div>
+    </TimeContainer>
+  );
+};
+
 const Countdown: React.FC<Props> = ({ targetDate }) => {
   const calculateTimeLeft = (): LeftTime => {
     const difference = +new Date(targetDate) - +new Date();
@@ -72,22 +59,10 @@ const Countdown: React.FC<Props> = ({ targetDate }) => {
 
   return (
     <CountdownContainer>
-      <TimeContainer>
-        <div>{formatTimeValue(timeLeft.days)}</div>
-        <div>Days</div>
-      </TimeContainer>
-      <TimeContainer>
-        <div>{formatTimeValue(timeLeft.hours)}</div>
-        <div>Hours</div>
-      </TimeContainer>
-      <TimeContainer>
-        <div>{formatTimeValue(timeLeft.minutes)}</div>
-        <div>Minutes</div>
-      </TimeContainer>
-      <TimeContainer>
-        <div>{formatTimeValue(timeLeft.seconds)}</div>
-        <div>Seconds</div>
-      </TimeContainer>
+      {counterItem(formatTimeValue(timeLeft.days), 'Dias')}
+      {counterItem(formatTimeValue(timeLeft.hours), 'Horas')}
+      {counterItem(formatTimeValue(timeLeft.minutes), 'Minutos')}
+      {counterItem(formatTimeValue(timeLeft.seconds), 'Segundos')}
     </CountdownContainer>
   );
 };

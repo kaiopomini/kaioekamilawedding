@@ -17,10 +17,10 @@ const UniqueOverlay: React.FC = () => {
             <a href="#section1">Home</a>
           </li>
           <li>
-            <a href="#section2">Local</a>
+            <a href="#section2">Presentes</a>
           </li>
           <li>
-            <a href="#section3">Presentes</a>
+            <a href="#section3">Local</a>
           </li>
         </ul>
       </Header>

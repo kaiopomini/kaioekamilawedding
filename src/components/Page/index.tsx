@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Countdown from '../Countdown';
 import Menu from '../Menu';
 import { SectionBase, SectionWrapper } from '../Section';
 import UniqueOverlay from '../UniqueOverlay';
+import { Gift } from './Gift';
 import { Home } from './Home';
 import { Container } from './styles';
 
@@ -22,7 +22,7 @@ const Page: React.FC = () => {
             className="gray"
             sectionName="home2"
             id="section2"
-            overlayNode={<Menu />}
+            overlayNode={<Gift />}
           />
           <SectionBase
             className="gray"

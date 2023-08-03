@@ -15,21 +15,24 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
-  width: 10px;
-}
+@media (min-width: 768px) {
+    /* Estilo do scroll para dispositivos móveis */
+    *::-webkit-scrollbar {
+      width: 10px;
+    }
 
-*::-webkit-scrollbar-track {
-  background: transparent; 
-}
- 
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 8px;
-}
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-*:hover::-webkit-scrollbar-thumb {
-  background: #cfcfcf; 
-}
+    *::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 8px;
+    }
+
+    *:hover::-webkit-scrollbar-thumb {
+      background: #cfcfcf;
+    }
+  }
 
 `;

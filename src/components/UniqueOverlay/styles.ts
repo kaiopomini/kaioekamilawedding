@@ -14,6 +14,9 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   right: 10px;
+  @media (max-width: 768px) {
+    right: 0;
+  }
 
   display: flex;
   justify-content: center;
@@ -52,6 +55,10 @@ export const Footer = styled(motion.footer)`
   bottom: 0;
   left: 0;
   right: 10px;
+
+  @media (max-width: 768px) {
+    right: 0;
+  }
 
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.3);

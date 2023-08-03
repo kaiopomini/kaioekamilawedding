@@ -14,6 +14,9 @@ export const TimeContainer = styled.div`
   margin: 0 12px;
   color: white;
   width: 110px;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
 `;
 
 export const TimeTitle = styled.h2`

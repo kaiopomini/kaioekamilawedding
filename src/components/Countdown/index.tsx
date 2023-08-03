@@ -60,9 +60,9 @@ const Countdown: React.FC<Props> = ({ targetDate }) => {
   return (
     <CountdownContainer>
       {counterItem(formatTimeValue(timeLeft.days), 'Dias')}
-      {counterItem(formatTimeValue(timeLeft.hours), 'Horas')}
-      {counterItem(formatTimeValue(timeLeft.minutes), 'Minutos')}
-      {counterItem(formatTimeValue(timeLeft.seconds), 'Segundos')}
+      {counterItem(formatTimeValue(timeLeft.hours), 'Hr')}
+      {counterItem(formatTimeValue(timeLeft.minutes), 'Min')}
+      {counterItem(formatTimeValue(timeLeft.seconds), 'Seg')}
     </CountdownContainer>
   );
 };

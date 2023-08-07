@@ -1,4 +1,4 @@
-import './assets/leaflet.css';
+import 'leaflet/dist/leaflet.css';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
 

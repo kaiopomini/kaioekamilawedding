@@ -5110,6 +5110,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+svg-to-dataurl@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svg-to-dataurl/-/svg-to-dataurl-1.0.0.tgz#343f21a5dc3e051ae413c590cf478b7cf7a5f070"
+  integrity sha512-WrPB9vdd4RO0BjcPN6NJ9ofj3Zt8de16TJZ+JVJ4LnE2OKNGz+HjgGv6rE5Hp3s+OnM56X9i64mfJDU9uf4ZqQ==
+
 tar@^6.1.11, tar@^6.1.13, tar@^6.1.15, tar@^6.1.2:
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.15.tgz#c9738b0b98845a3b344d334b8fa3041aaba53a69"

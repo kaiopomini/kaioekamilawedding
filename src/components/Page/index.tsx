@@ -3,8 +3,11 @@ import React from 'react';
 import Menu from '../Menu';
 import { SectionBase, SectionWrapper } from '../Section';
 import UniqueOverlay from '../UniqueOverlay';
+import { Drink } from './Drink';
+import { Food } from './Food';
 import { Gift } from './Gift';
 import { Home } from './Home';
+import { Locale } from './Locale';
 import { Container } from './styles';
 
 const Page: React.FC = () => {
@@ -29,19 +32,19 @@ const Page: React.FC = () => {
             className="food"
             sectionName="food"
             id="section3"
-            overlayNode={<Menu />}
+            overlayNode={<Food />}
           />
           <SectionBase
             className="drink"
             sectionName="drink"
             id="section4"
-            overlayNode={<Menu />}
+            overlayNode={<Drink />}
           />
           <SectionBase
             className="location"
             sectionName="location"
             id="section5"
-            overlayNode={<Menu />}
+            overlayNode={<Locale />}
           />
           <SectionBase
             className="faq"

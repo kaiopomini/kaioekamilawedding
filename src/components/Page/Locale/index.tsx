@@ -28,7 +28,7 @@ const customIcon = new L.Icon({
 });
 
 export const Locale = () => {
-  const centerLocation = { lat: -24.2421208, lng: -52.7905163 };
+  const centerLocation = { lat: -24.2426774, lng: -52.7905163 };
   const location1 = { lat: -24.2418208, lng: -52.7913163 }; // Igreja
   const location2 = { lat: -24.2426774, lng: -52.7896493 }; // clube da melhor idade
 

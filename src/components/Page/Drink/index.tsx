@@ -20,18 +20,13 @@ export const Drink = () => {
         <p>(Disponível das 20h:00 às 01h:00)</p>
         <br />
 
-        <h3>Drinks</h3>
-        <p>Mojito</p>
-        <p>Sex on the beach</p>
-        <p>Rossini</p>
+        <h4>Drinks</h4>
+        <p>Mojito, Sex on the beach e Rossini</p>
         <br />
-        <h3>Batidas/caipirinhas</h3>
-        <p>Abacaxi</p>
-        <p>Limão</p>
-        <p>Morango</p>
-        <p>Maracujá</p>
+        <h4>Batidas/caipirinhas</h4>
+        <p>Abacaxi, Limão, Morango e Maracujá</p>
         <br />
-        <h3>Zero Alcool</h3>
+        <h4>Zero Alcool</h4>
         <p>Liminada Suiça</p>
         <p>Red hot explosion (laranja, leite condensado e grenadini)</p>
         <br />

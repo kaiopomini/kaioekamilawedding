@@ -1,6 +1,3 @@
-import 'leaflet/dist/leaflet.css';
-
-import { useState } from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import { MapContainer, Marker, Popup, TileLayer, Tooltip } from 'react-leaflet';
 
@@ -20,18 +17,19 @@ export const Locale = () => {
     <Container>
       <Text>
         <h1>Localização</h1>
+        <br />
       </Text>
       <MapContainer
         center={centerLocation}
         zoom={17}
-        style={{ height: '80%', width: '100%' }}
+        style={{ height: '60%', width: '100%' }}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={location1}>
           <Tooltip permanent direction="bottom" offset={[-14, 30]} interactive>
             <p>Igreja</p>
             <button onClick={() => openGoogleMaps(location1)}>
-              <FaMapMarkedAlt /> Abrir rotas no Google Maps
+              <FaMapMarkedAlt /> Abrir rotas
             </button>
           </Tooltip>
         </Marker>
@@ -39,7 +37,7 @@ export const Locale = () => {
           <Tooltip offset={[-14, 28]} permanent direction="bottom" interactive>
             <p>Salão de festas</p>
             <button onClick={() => openGoogleMaps(location2)}>
-              <FaMapMarkedAlt /> Abrir rotas no Google Maps
+              <FaMapMarkedAlt /> Abrir rotas
             </button>
           </Tooltip>
         </Marker>

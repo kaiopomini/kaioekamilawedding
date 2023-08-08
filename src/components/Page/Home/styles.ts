@@ -16,6 +16,14 @@ export const SubtitleSection = styled.h6`
   margin-top: 24px;
 `;
 
+export const Time = styled.p`
+  font-family: 'Dancing Script';
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+`;
+
 export const Container = styled.div`
   height: 100%;
   overflow: hidden;

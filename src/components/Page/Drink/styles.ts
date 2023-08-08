@@ -25,11 +25,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   font-family: 'Dancing Script';
   color: #000000;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 24px;
   color: #fafafa;
 `;

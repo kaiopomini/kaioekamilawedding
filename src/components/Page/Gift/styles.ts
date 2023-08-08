@@ -25,11 +25,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   font-family: 'Dancing Script';
   color: #000000;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 24px;
   color: #fafafa;
 `;
@@ -46,7 +46,7 @@ export const Message = styled.h6`
   color: #fafafa;
 `;
 
-export const Text = styled.p`
+export const Text = styled.div`
   font-family: 'Roboto';
 
   font-size: 1rem;
@@ -55,13 +55,37 @@ export const Text = styled.p`
   text-align: left;
 
   color: #fafafa;
+
+  height: 100%;
+  max-width: 100%;
+
+  overflow: auto;
+  padding: 0 0 24px 0;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+`;
+
+export const TextButton = styled.div`
+  font-family: 'Roboto';
+
+  font-size: 1rem;
+  text-align: center;
 `;
 
 export const QRCodeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 40%;
+
+  margin: 16px 0 24px 0;
 `;
 
 export const QRCode = styled.div`
@@ -78,6 +102,25 @@ export const QRCode = styled.div`
 `;
 
 export const CopyButton = styled.button`
-  background-color: #fafafa;
-  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const Icon = styled.span`
+  margin-right: 10px;
+`;
+
+export const SuccessIcon = styled.span`
+  margin-left: 10px;
 `;

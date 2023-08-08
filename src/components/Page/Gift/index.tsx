@@ -1,26 +1,42 @@
+import { faCheck, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { QRCodeSVG } from 'qrcode.react';
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container, CopyButton, QRCode, QRCodeContainer, Text } from './styles';
+import {
+  Container,
+  CopyButton,
+  Icon,
+  QRCode,
+  QRCodeContainer,
+  Text,
+  TextButton,
+  Title,
+} from './styles';
 
 export const Gift = () => {
-  const pixKey =
-    '00020126330014BR.GOV.BCB.PIX0111080651239375204000053039865802BR5925Kaio Willian Pomini Campo6009SAO PAULO610805409000622405202DA14sZdio8KRq996516630432FC';
+  const [copied, setCopied] = useState(false);
+  const [pixKey, setPixKey] = useState(
+    '00020126330014BR.GOV.BCB.PIX0111080651239375204000053039865802BR5925Kaio Willian Pomini Campo6009SAO PAULO610805409000622405202DA14sZdio8KRq996516630432FC',
+  );
 
   const handleCopyClick = () => {
-    // Função para copiar a chave PIX para a área de transferência
     const textArea = document.createElement('textarea');
     textArea.value = pixKey;
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 7000);
   };
 
   return (
     <Container>
+      <Title>Pedido Especial</Title>
       <Text>
-        <h1>Pedido Especial</h1>
         <p>
           <br />
           Caros amigos e familiares,
@@ -52,7 +68,12 @@ export const Gift = () => {
           <QRCodeSVG value={pixKey} size={250} />
         </QRCode>
 
-        <CopyButton onClick={handleCopyClick}>Copiar Chave PIX</CopyButton>
+        <CopyButton onClick={handleCopyClick}>
+          <Icon>
+            <FontAwesomeIcon icon={copied ? faCheck : faCopy} />
+          </Icon>
+          <TextButton>{copied ? 'Chave PIX Copiada' : 'Copiar PIX'}</TextButton>
+        </CopyButton>
       </QRCodeContainer>
     </Container>
   );

@@ -3,7 +3,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 import { MapContainer, Marker, Popup, TileLayer, Tooltip } from 'react-leaflet';
 
 import { svgToUrl } from '../../../utils/svg';
-import { Container, Text } from './styles';
+import { Container, Title } from './styles';
 
 const mapMarkerIcon = `<svg
     xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +39,7 @@ export const Locale = () => {
 
   return (
     <Container>
-      <Text>
-        <h1>Localização</h1>
-        <br />
-      </Text>
+      <Title>Localização</Title>
       <MapContainer
         center={centerLocation}
         zoom={17}

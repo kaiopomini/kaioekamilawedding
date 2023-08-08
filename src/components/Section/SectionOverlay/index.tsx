@@ -43,8 +43,9 @@ const SectionOverlay: React.FC<Props> = ({ section, children }) => {
     [0, 1, 1, 0],
   );
   const pointerEvents = useTransform(opacity, (value) => (value > 0 ? 'auto' : 'none'));
+  const zIndex = useTransform(opacity, (value) => (value > 0 ? 1 : -10));
 
-  return <Container style={{ opacity, pointerEvents }}>{children}</Container>;
+  return <Container style={{ opacity, pointerEvents, zIndex }}>{children}</Container>;
 };
 
 export default SectionOverlay;

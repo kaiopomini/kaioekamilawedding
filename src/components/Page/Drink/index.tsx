@@ -1,10 +1,10 @@
-import { Container, Text } from './styles';
+import { Container, Text, Title } from './styles';
 
 export const Drink = () => {
   return (
     <Container>
+      <Title>Bebidas</Title>
       <Text>
-        <h1>Bebidas</h1>
         <br />
         <h2>Servido à mesa:</h2>
         <p>(Disponível durante toda noite)</p>

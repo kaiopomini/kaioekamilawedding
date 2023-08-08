@@ -86,6 +86,9 @@ export const QRCodeContainer = styled.div`
   align-items: center;
 
   margin: 16px 0 24px 0;
+  @media (max-width: 768px) {
+    margin-bottom: 70px;
+  }
 `;
 
 export const QRCode = styled.div`

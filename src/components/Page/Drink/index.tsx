@@ -11,7 +11,7 @@ export const Drink = () => {
         <br />
 
         <p>Refrigerantes (coca-cola e guaraná)</p>
-        <p>Agua mineral (com e sem gás)</p>
+        <p>Água mineral (com e sem gás)</p>
         <p>Suco natural de laranja</p>
         <p>Energético</p>
 
@@ -27,8 +27,8 @@ export const Drink = () => {
         <p>Abacaxi, Limão, Morango e Maracujá</p>
         <br />
         <h4>Zero Alcool</h4>
-        <p>Liminada Suiça</p>
-        <p>Red hot explosion (laranja, leite condensado e grenadini)</p>
+        <p>Limonada Suiça</p>
+        <p>Red hot explosion (laranja, leite condensado e grenadine)</p>
         <br />
         <h2>Chopp</h2>
         <p>(Self-service disponível durante toda noite)</p>

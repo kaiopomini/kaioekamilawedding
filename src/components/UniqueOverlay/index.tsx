@@ -10,7 +10,7 @@ const UniqueOverlay: React.FC = () => {
 
   useLayoutEffect(() => {
     const onScroll = () => {
-      setShowFooter(scrollYProgress.get() === 1);
+      setShowFooter(scrollYProgress.get() > 0.95);
     };
 
     // Verifica o estado do footer sempre que o scrollYProgress é atualizado

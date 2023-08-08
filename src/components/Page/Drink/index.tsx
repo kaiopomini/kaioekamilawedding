@@ -30,8 +30,10 @@ export const Drink = () => {
         <p>Liminada Suiça</p>
         <p>Red hot explosion (laranja, leite condensado e grenadini)</p>
         <br />
-        <h2>Choop</h2>
+        <h2>Chopp</h2>
         <p>(Self-service disponível durante toda noite)</p>
+        <br />
+        <br />
       </Text>
     </Container>
   );

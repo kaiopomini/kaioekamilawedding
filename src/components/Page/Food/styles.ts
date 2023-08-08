@@ -46,7 +46,7 @@ export const Message = styled.h6`
   color: #fafafa;
 `;
 
-export const Text = styled.p`
+export const Text = styled.div`
   font-family: 'Roboto';
 
   font-size: 1rem;
@@ -55,6 +55,22 @@ export const Text = styled.p`
   text-align: left;
 
   color: #fafafa;
+
+  height: 100%;
+  max-width: 100%;
+
+  overflow: auto;
+  padding: 0 0 24px 0;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
 export const QRCodeContainer = styled.div`

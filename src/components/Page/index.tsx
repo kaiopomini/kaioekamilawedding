@@ -18,38 +18,38 @@ const Page: React.FC = () => {
           <SectionBase
             className="home"
             sectionName="home"
-            id="section1"
+            id="home"
             overlayNode={<Home />}
           />
           <SectionBase
             className="gift"
             sectionName="gift"
-            id="section2"
+            id="gift"
             overlayNode={<Gift />}
           />
 
           <SectionBase
             className="food"
             sectionName="food"
-            id="section3"
+            id="food"
             overlayNode={<Food />}
           />
           <SectionBase
             className="drink"
             sectionName="drink"
-            id="section4"
+            id="drink"
             overlayNode={<Drink />}
           />
           <SectionBase
             className="location"
             sectionName="location"
-            id="section5"
+            id="location"
             overlayNode={<Locale />}
           />
           <SectionBase
             className="faq"
             sectionName="faq"
-            id="section6"
+            id="faq"
             overlayNode={<Menu />}
           />
         </div>

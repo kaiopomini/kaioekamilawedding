@@ -16,6 +16,9 @@ export const Drink = () => {
         <p>Energético</p>
 
         <br />
+        <h2>Chopp</h2>
+        <p>(Self-service disponível durante toda noite)</p>
+        <br />
         <h2>Bar</h2>
         <p>(Disponível das 20h:00 às 01h:00)</p>
         <br />
@@ -29,9 +32,7 @@ export const Drink = () => {
         <h4>Zero Alcool</h4>
         <p>Limonada Suiça</p>
         <p>Red hot explosion (laranja, leite condensado e grenadine)</p>
-        <br />
-        <h2>Chopp</h2>
-        <p>(Self-service disponível durante toda noite)</p>
+
         <br />
         <br />
       </Text>

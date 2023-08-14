@@ -42,32 +42,32 @@ const UniqueOverlay: React.FC = () => {
       <Header>
         <ul>
           <li>
-            <a href="#section1" onClick={handleLinkClick}>
+            <a href="#home" onClick={handleLinkClick}>
               Início
             </a>
           </li>
           <li>
-            <a href="#section2" onClick={handleLinkClick}>
+            <a href="#gift" onClick={handleLinkClick}>
               Presentes
             </a>
           </li>
           <li>
-            <a href="#section3" onClick={handleLinkClick}>
-              Comida
+            <a href="#food" onClick={handleLinkClick}>
+              Jantar
             </a>
           </li>
           <li>
-            <a href="#section4" onClick={handleLinkClick}>
+            <a href="#drink" onClick={handleLinkClick}>
               Bebidas
             </a>
           </li>
           <li>
-            <a href="#section5" onClick={handleLinkClick}>
+            <a href="#location" onClick={handleLinkClick}>
               Local
             </a>
           </li>
           <li>
-            <a href="#section6" onClick={handleLinkClick}>
+            <a href="#faq" onClick={handleLinkClick}>
               FAQ
             </a>
           </li>
@@ -78,32 +78,32 @@ const UniqueOverlay: React.FC = () => {
         <Footer style={{ opacity }}>
           <ul>
             <li>
-              <a href="#section1" onClick={handleLinkClick}>
+              <a href="#home" onClick={handleLinkClick}>
                 Início
               </a>
             </li>
             <li>
-              <a href="#section2" onClick={handleLinkClick}>
+              <a href="#gift" onClick={handleLinkClick}>
                 Presentes
               </a>
             </li>
             <li>
-              <a href="#section3" onClick={handleLinkClick}>
-                Comida
+              <a href="#food" onClick={handleLinkClick}>
+                Jantar
               </a>
             </li>
             <li>
-              <a href="#section4" onClick={handleLinkClick}>
+              <a href="#drink" onClick={handleLinkClick}>
                 Bebidas
               </a>
             </li>
             <li>
-              <a href="#section5" onClick={handleLinkClick}>
+              <a href="#location" onClick={handleLinkClick}>
                 Local
               </a>
             </li>
             <li>
-              <a href="#section6" onClick={handleLinkClick}>
+              <a href="#faq" onClick={handleLinkClick}>
                 FAQ
               </a>
             </li>

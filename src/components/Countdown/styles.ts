@@ -26,3 +26,9 @@ export const TimeTitle = styled.h2`
 export const TimeSubtitle = styled.h6`
   font-size: 1.5rem;
 `;
+
+export const Image = styled.img`
+  @media (max-width: 768px) {
+    width: 300px;
+  }
+`;

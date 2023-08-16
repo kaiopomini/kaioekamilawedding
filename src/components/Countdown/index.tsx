@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import { CountdownContainer, TimeContainer, TimeSubtitle, TimeTitle } from './styles';
+import img from '../../../resources/images/noivos.png';
+import {
+  CountdownContainer,
+  Image,
+  TimeContainer,
+  TimeSubtitle,
+  TimeTitle,
+} from './styles';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   targetDate: Date;
@@ -11,6 +18,7 @@ interface LeftTime {
   hours: number;
   minutes: number;
   seconds: number;
+  finished: boolean;
 }
 
 const counterItem = (title: string, subtitle: string) => {
@@ -29,14 +37,20 @@ const counterItem = (title: string, subtitle: string) => {
 const Countdown: React.FC<Props> = ({ targetDate }) => {
   const calculateTimeLeft = (): LeftTime => {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {} as LeftTime;
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0, finished: false };
 
     if (difference > 0) {
       timeLeft = {
+        ...timeLeft,
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
+      };
+    } else {
+      timeLeft = {
+        ...timeLeft,
+        finished: true,
       };
     }
 
@@ -50,20 +64,31 @@ const Countdown: React.FC<Props> = ({ targetDate }) => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+    const timer = setInterval(() => {
+      const timeLeft = calculateTimeLeft();
+      setTimeLeft(timeLeft);
+
+      if (timeLeft.finished) {
+        clearInterval(timer);
+      }
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <CountdownContainer>
-      {counterItem(formatTimeValue(timeLeft.days), 'Dias')}
-      {counterItem(formatTimeValue(timeLeft.hours), 'Hr')}
-      {counterItem(formatTimeValue(timeLeft.minutes), 'Min')}
-      {counterItem(formatTimeValue(timeLeft.seconds), 'Seg')}
-    </CountdownContainer>
+    <>
+      {timeLeft.finished ? (
+        <Image src={img} alt="noivos" />
+      ) : (
+        <CountdownContainer>
+          {counterItem(formatTimeValue(timeLeft.days), 'Dias')}
+          {counterItem(formatTimeValue(timeLeft.hours), 'H')}
+          {counterItem(formatTimeValue(timeLeft.minutes), 'M')}
+          {counterItem(formatTimeValue(timeLeft.seconds), 'S')}
+        </CountdownContainer>
+      )}
+    </>
   );
 };
 

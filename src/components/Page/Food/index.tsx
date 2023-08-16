@@ -3,7 +3,7 @@ import { Container, Text, Title } from './styles';
 export const Food = () => {
   return (
     <Container>
-      <Title>Comida</Title>
+      <Title>Jantar</Title>
       <Text>
         <br />
         <h2>Mesa de frios:</h2>
